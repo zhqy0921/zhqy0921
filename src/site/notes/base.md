@@ -2,6 +2,8 @@
 {"dg-publish":true,"permalink":"/base/","tags":["gardenEntry"]}
 ---
 
+
+---
 ---
 - The dg-home setting tells the plugin that this should be your home page or entry into your digital garden. (It only needs to be added to _one_ note, not every note you'll publish).  
     dg-home 设置告诉插件，这应该是您的主页或数字花园的入口。（只需将其添加到_一条_笔记中，而不是您发布的每条笔记中。）
