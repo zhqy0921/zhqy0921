@@ -16,8 +16,56 @@
 - 消息模式：一系列令牌
 - 握手模式：由消息模式组合生成
 
-## 握手状态机
-![Pasted image 20260220024643.png](/img/user/asset/Pasted%20image%2020260220024643.png)
-![Pasted image 20260220024736.png](/img/user/asset/Pasted%20image%2020260220024736.png)
+## 处理规则
+![Pasted image 20260220193248.png](/img/user/asset/Pasted%20image%2020260220193248.png)
+![Pasted image 20260220193505.png](/img/user/asset/Pasted%20image%2020260220193505.png)
+## Real
+- 消息模式：`("e", "s", "ee", "es", "se", "ss", "psk")`.
+	- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
