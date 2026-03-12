@@ -40,7 +40,7 @@ $\textcolor{red}{1}$
 
 # bpr02
 
-
+## Game
 
 - 目的：安全交换密钥--**语义安全**
 ---
@@ -92,4 +92,43 @@ $$
 - $Game_{3}$
 	- $\textcolor{red}{Adv=\frac{2q^2_{E}+q^2_{S}}{2(q-1)}+\frac{q^2_{h}}{2^{l_{1}+1}}}$
 - 
+
+## 状态、中止视角
+- 如何为了区分real or random，那么中止概率就是优势
+
+![Pasted image 20260312232642.png](/img/user/asset/Pasted%20image%2020260312232642.png)
+
+- list
+	- $\Lambda_{H}(\Lambda_{A})$
+		- $rule_{H_{1}}:(i,q,r)(第i个Hash，输入，输出)$
+	- $\Lambda_{E}$
+		- $rule_{E_{1}}:(k,Z,*(none),*(E),Z^*)(口令，输入(明文)，..，加密算法，输出(密文))$
+			- 第三个参数类似$g^*$,此处不使用*，而是随机映射
+		- $rule_{D_{1}}:(k,Z,\varphi,D,Z^*)$
+			- $g^\varphi=Z$
+	- $\Lambda_{\Psi}(Send-query)$
+		- $Send(I,m):模拟A发送m到实体I。Send(U,Start)会初始化算法，因此A会得到C\to S的流$
+		- ![Pasted image 20260312233210.png](/img/user/asset/Pasted%20image%2020260312233210.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
