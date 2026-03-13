@@ -109,9 +109,20 @@ $$
 	- $\Lambda_{\Psi}(Send-query)$
 		- $Send(I,m):模拟A发送m到实体I。Send(U,Start)会初始化算法，因此A会得到C\to S的流$
 		- ![Pasted image 20260312233210.png](/img/user/asset/Pasted%20image%2020260312233210.png)
-
-
-
+	- 此处惰性采样（我自己编的）
+		- 就是因为$\cancel{E_{pw}(r_{1}\gets G)=C \& E_{pw}(r_{2}\gets G)=C}$会碰撞
+		- 或者：$E(r_{1})=C_{1},E(r_{1})=C_{2},因为前文图中写的后置，这更有可能！$
+			- $\textcolor{red}{\frac{q_{E}^2}{2q}（Game_{1}）}$
+		- 如果和 #25XW 一样使用非惰性采样（记录，不会采到一样的C）那么$\textcolor{red}{Adv=negl}$
+			- $在一个集合，本次与上次碰撞Pr=\frac{i-1}{q}对应上文的或者$
+	- 问题出在$\cancel{服务器解密Oracle}$
+		- 所以$Game_{2}修改了规则S_{1}\to S_{1}^{(2)}改为查表$
+		- 此时解密Oracle有问题：$\varphi=⊥$
+			- $我编一个多用户安全的概念吧$
+			- $这是加密谕言机和Send谕言机冲突:q_{S}=q_{s}+q_{p}$
+				- $\textcolor{red}{Adv=\frac{q_{s}*q_{e}}{q}}(Game_{2})$
+					- 已经有$\frac{q_{e}}{q}个坏球，再抽q_{S}次大体这样理解吧$
+	- 
 
 
 
