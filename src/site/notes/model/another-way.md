@@ -15,12 +15,12 @@ $$
 \textbf{U}\ (pw) & & \textbf{S}\ (pw) \\[6pt]
 \L{x \leftarrow [1, q-1]}
 \L{X = g^x}
-\toR{Send:U^1：U,\, X}
+\toR{Send:U1：U,\, X}
 \R{y \leftarrow [1, q-1]}
 \R{Y = g^y}
 \R{K_S = X^y}
 \R{Y^* = \operatorname{Enc}_{pw}(Y)}
-\toL{Send:S^1：S,\, Y^*}
+\toL{Send:S1：S,\, Y^*}
 \L{Y = \operatorname{Dec}_{pw}(Y^*)}
 \L{K_U = Y^x}
 \L{Auth = H_1(U \parallel S \parallel X \parallel Y \parallel K_U)}
@@ -32,6 +32,17 @@ $$
 $$
 # Game
 
+|         | 变化  | 来源  | 损失  | 目的  | 规则变换 |
+| ------- | --- | --- | --- | --- | ---- |
+| $G_{0}$ |     |     |     |     |      |
+| $G_{1}$ |     |     |     |     |      |
+| $G_{2}$ |     |     |     |     |      |
+| $G_{3}$ |     |     |     |     |      |
+| $G_{4}$ |     |     |     |     |      |
+| $G_{5}$ |     |     |     |     |      |
+| $G_{6}$ |     |     |     |     |      |
+| $G_{7}$ |     |     |     |     |      |
+| $G_{8}$ |     |     |     |     |      |
 
 ## $G_{0}$
 这是[[model/another-way#RO\|#RO]]和[[model/another-way#理想分组密码模型\|#理想分组密码模型]]下的真实攻击游戏。[[model/another-way#问题1\|#问题1]]
@@ -50,6 +61,27 @@ $$
 按照真实参与者的方式模拟查询 [[model/another-way#Send\|#Send]]
 
 ---
+- 理想密码模型：
+	- 加解密置换性($E(D(Z^*))=Z^*,D(E(Z))=Z$)
+	- 加密唯一性($Z_{1}\neq Z_{2}\implies E(Z_{1})\neq E(Z_{2})$)
+
+$$
+|\overline{G}|=q-1\\
+当\Lambda有j个值，第j+1个值碰撞的概率为： \frac{j}{q-1}\\
+最终表中有q_{E}个值:\\
+Pr[Coll]\leq \sum_{j=0}^{q_{E}-1} \frac{j}{q-1}= \frac{q_{E}(q_{E}-1)}{2(q-1)}\leq \frac{q_{E}^2}{2(q-1)}
+$$
+- 等差数列求和
+## $G_{2}$
+[[model/another-way#Send\|#Send]]S1
+
+
+
+
+
+
+
+
 
 ## 谕言机
 ### 参数
@@ -97,13 +129,14 @@ $$
 		- 选择$\varphi\in Z_{q}^*$计算$Z=g^\varphi$并将$(k,Z,\varphi,\mathcal{D},Z^*)到\Lambda_{\mathcal{E}}$
 ### Send
 - client
-	- $U^{(1)}: \textcolor{blue}{Send(U^i,Start)}:选择\theta\in Z_{q}^*计算X=g^\theta 返回(U,X),客户端进入\textcolor{red}{等待状态}$
-	- $U^{(2)}: \textcolor{blue}{Send(U^i,(S,Y^*))}:\textcolor{red}{等待状态}下，计算Y=D_{pw}(Y^*),K_{U}=g^\theta$
-	- $U^{(3)}:计算Auth和sk_{U}$
+	- $U_{1}^{(1)}: \textcolor{blue}{Send(U^i,Start)}:选择\theta\in Z_{q}^*计算X=g^\theta 返回(U,X),客户端进入\textcolor{red}{等待状态}$
+	- $U_{2}^{(1)}: \textcolor{blue}{Send(U^i,(S,Y^*))}:\textcolor{red}{等待状态}下，计算Y=D_{pw}(Y^*),K_{U}=g^\theta$
+	- $U_{3}^{(1)}:计算Auth和sk_{U}$
 		- 将$((U,X),(S,Y^*))加入\Lambda_{trans}$
 - server
-	- $S^{(1)}:\textcolor{blue}{Send(S^j,(U,X)}:$
-	- $S^{(2)}:\textcolor{blue}{Send(S^j,H)}:计算Auth$
+	- $S_{1}^{(1)}:\textcolor{blue}{Send(S^j,(U,X)}:$
+		- $\textcolor{red}{Game_{2}S_{1}^{(2)}:}$
+	- $S_{2}^{(1)}:\textcolor{blue}{Send(S^j,H)}:计算Auth$
 		- $S^{(3)}:计算sk_{S}$
 ### Execute、Reveal、Test
 - $Execute(U^i,S^j):获取交互记录((U,X),(S,Y^*),Auth)$
