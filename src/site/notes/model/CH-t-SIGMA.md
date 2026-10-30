@@ -50,7 +50,7 @@ $$
 Adv_{H,\mathcal{B}}^{cr}(k)\leq Adv_{SP,\mathcal{A}}^{sss-na}(k)
 $$运行时间相同
 - `na` 可理解为 **no attack**
->$$
+$$
 \boxed{\begin{array}{c|c|c}
  CR&SS&SSS \\
  succ:&succ:&succ: \\
@@ -60,16 +60,20 @@ $$运行时间相同
 \end{array}
 } 
  $$
->![Pasted image 20261029085940.png](/img/user/asset/Pasted%20image%2020261029085940.png)
+ $$
+ \boxed{\begin{array}{c|c|c}
+ HVZK&special-HVZK&S-HVZK \\
+ 能模拟转录&能指定挑战&能指定C，Z并计算Y
+ \end{array}}$$
 
 > [!NOTE] 第二句是第一句的逆否命题？【有种A包含B的感觉】
-> 任何有效的 Hash 碰撞攻击，都能被转换成有效的 SSS 攻击。因此，只要 SSS 安全，就能推出 Hash 具有碰撞抵抗性。
-### schnorr is ok
+ 任何有效的 Hash 碰撞攻击，都能被转换成有效的 SSS 攻击。因此，只要 SSS 安全，就能推出 Hash 具有碰撞抵抗性。
+### schnorr is ok but FS is not
 - 什么是$\Sigma-H$
 	- 就是$LHF$中重构承诺的概念
 
 
-###
+### CH-$\Sigma$
 
 
 
