@@ -51,24 +51,15 @@
 
 
 # 11/22 homomorphic CH=TDF？
-# HTDF
---- start-multi-column: CryptoNotes
+- HTDF
+	- $pk=A,sk=td\implies SamPre(A,B,td)\to U\;satify:AU=B$
+	- ![Pasted image 20261122222626.png\|600](/img/user/asset/Pasted%20image%2020261122222626.png)
+	- $AU+xG=V \;\;AU=V-xG=AU$
+- $V=AU+xG.采样新的U=找到r'$
 
-```column-settings
-Number of Columns: 2
-Largest Column: standard
-Border: off
-Shadow: off
-Column Spacing: 20px
-Alignment: Left
-```
-
+## HTDF
 ![Pasted image 20261122211804.png\|800](/img/user/asset/Pasted%20image%2020261122211804.png)
 
 ![Pasted image 20261122220030.png\|800](/img/user/asset/Pasted%20image%2020261122220030.png)
---- end-column ---
-
-
-
-
---- end-multi-column
+![Pasted image 20261122223411.png\|600](/img/user/asset/Pasted%20image%2020261122223411.png)
+## PHTDF
